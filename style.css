@@ -1,0 +1,84 @@
+:root {
+  --hover-color: #F1802D;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    color: #1e1e1e;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 2rem;
+}
+
+.title-name,
+.visitor-count {
+    flex: 1;
+}
+
+.title-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: #0f172a;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.title-name:hover {
+    color: var(--hover-color);
+    cursor: default;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.7rem;
+}
+
+.nav-btn {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #374151;
+    cursor: pointer;
+    padding-bottom: 0.25rem;
+    transition: color 0.25s ease, border-bottom 0.25s ease;
+}
+
+.nav-btn:hover {
+    color: var(--hover-color);
+}
+
+.nav-btn.active {
+    color: var(--hover-color);
+    border-bottom: 2px solid var(--hover-color);
+}
+
+.visitor-count {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #6b7280;
+    padding: 0 0rem;
+}
+
+main {
+    height: 150vh;
+}
