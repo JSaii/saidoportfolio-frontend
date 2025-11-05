@@ -1,5 +1,5 @@
 :root {
-  --hover-color: #F1802D;
+    --hover-color: #F1802D;
 }
 
 body {
@@ -79,6 +79,70 @@ body {
     padding: 0 0rem;
 }
 
-main {
-    height: 150vh;
+/* ===== About Section ===== */
+.about-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.8;
+    color: #374151;
+}
+
+/* ===== About Section Name ===== */
+.about-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    /* large but not overpowering */
+    color: var(--hover-color);
+    /* your orange */
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.8px;
+    line-height: 1.1;
+}
+
+
+.about-section h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #374151;
+    border-left: 4px solid var(--hover-color);
+    padding-left: 0.75rem;
+    letter-spacing: 0.3px;
+}
+
+.about-section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ===== Social Links ===== */
+.social-links {
+    margin-top: 2rem;
+}
+
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: #374151;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.linkedin-link:hover {
+    transform: translateY(-1px);
+    opacity: 0.8;
+}
+
+.linkedin-icon {
+    width: 22px;
+    height: 22px;
+    fill: var(--hover-color);
+    filter: invert(52%) sepia(91%) saturate(2423%) hue-rotate(360deg) brightness(101%) contrast(97%);
 }
