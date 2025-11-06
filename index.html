@@ -15,7 +15,7 @@
     <header class="header">
         <div class="title-name">Joseph Saido Gabriel</div>
         <nav class="nav">
-            <div id="about-btn" class="nav-btn">About me</div>
+            <div id="about-btn" class="nav-btn active">About me</div>
             <div id="resume-btn" class="nav-btn">My Resume</div>
             <div id="this-site-btn" class="nav-btn">About this website</div>
         </nav>
@@ -23,7 +23,7 @@
     </header>
 
     <main>
-        <section id="about" class="about-section">
+        <section id="about" class="tab-content active">
             <h2 class="about-name">Joseph Saido Gabriel</h2>
             <h1>About Me</h1>
             <p>
@@ -46,7 +46,110 @@
                 </a>
             </div>
         </section>
+        <section id="resume" class="tab-content">
+            <div class="resume-section">
+                <h1>My Resume</h1>
+
+                <h2>Education</h2>
+                <div class="resume-entry">
+                    <h3>Shibaura Institute of Technology, Tokyo, Japan</h3>
+                    <p><em>Master’s Course, Electrical Engineering and Computer Science</em> (Apr 2024 – Apr 2026,
+                        Expected)</p>
+                    <p>Data Science/Engineering Laboratory – NLP Researcher (Current GPA 3.9 / 4)</p>
+                </div>
+
+                <div class="resume-entry">
+                    <h3>Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia</h3>
+                    <p><em>Bachelor of Engineering in Computer Engineering</em> (Aug 2019 – Sept 2023, GPA 3.75 / 4)</p>
+                </div>
+
+                <h2>Experience</h2>
+                <div class="resume-entry">
+                    <p><em>Jul 2025 – Aug 2025</em></p>
+                    <h3>Full-Stack Developer – <a href="https://ocrlogbook.com" target="_blank">ocrlogbook.com</a></h3>
+                    <p>Joint development with Air Hong-Kong pilot.</p>
+                    <ul>
+                        <li>Built a serverless OCR pipeline to extract structured flight log data (names, route,
+                            aircraft, times) from uploaded screenshots.
+                        </li>
+                        <li>Integrated Amazon Textract for OCR processing, reducing manual logbook entry time from
+                            several minutes down to seconds per
+                            record. Supported batch processing to cut manual work even further.
+                        </li>
+                        <li>Designed a scalable cloud architecture using S3, CloudFront, API Gateway, Lambda, and
+                            DynamoDB, with Route53.
+                        </li>
+                        <li>Delivered the complete solution end-to-end by developing a polished HTML/CSS/JavaScript
+                            front-end for uploading, viewing,
+                            and exporting results.</li>
+                    </ul>
+                </div>
+
+                <h2>Projects</h2>
+                <div class="resume-entry">
+                    <p><em>Nov 2025</em></p>
+                    <h3>AWS Serverless Website – <a href="https://josephsaido.com" target="_blank">josephsaido.com</a>
+                    </h3>
+                    <p>Personal portfolio and resume built on a fully serverless AWS architecture with a
+                        custom frontend.</p>
+                    <ul>
+                        <li>Developed a scalable static website hosted on S3 and distributed globally through CloudFront
+                            with Route53 DNS and ACM SSL certificates.</li>
+                        <li>Implemented multi-environment CI/CD pipelines (test and live) using AWS CodePipeline,
+                            CodeCommit, and S3 artifact buckets for automated deployments.</li>
+                        <li>Automated infrastructure provisioning and updates with Terraform, enabling fully
+                            reproducible, version-controlled builds.</li>
+                        <li>Designed and built a modern, responsive frontend using HTML, CSS, and vanilla JavaScript.
+                        </li>
+                        <li>Integrated Lambda and DynamoDB for visitor tracking, analytics, and feedback form
+                            submissions with real-time updates.</li>
+                        <li>Configured fine-grained IAM roles, artifact access policies, and environment isolation for
+                            security and controlled CI/CD automation.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-entry">
+                    <h3>Research Paper – <a href="https://link.springer.com/chapter/10.1007/978-3-032-04728-1_11"
+                            target="_blank">AIBB 2025</a></h3>
+                    <p>“Enhancing Automated Essay Scoring Model’s Interpretability”</p>
+                    <ul>
+                        <li>Proposed a rubric-aligned AES method using Dual-Anchor Triplet Loss on DeBERTa.</li>
+                        <li>Published results showing interpretability improvements and competitive QWK scores.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-entry">
+                    <h3>Bachelor’s Final Research Project – Hand Pose-Based Video Game Control</h3>
+                    <ul>
+                        <li>Developed a ML-based game controller using webcam hand-pose recognition.</li>
+                        <li>Achieved 98% accuracy with real-time control and positive UEQ user feedback.</li>
+                    </ul>
+                </div>
+
+                <h2>Certifications</h2>
+                <ul class="resume-list">
+                    <li><a href="https://www.credly.com/badges/acc2c787-9cea-4a94-a705-d891a2852947/public_url"
+                            target="_blank">AWS Certified AI Practitioner (Sep 2025)</a></li>
+                    <li><a href="https://www.credly.com/badges/07336388-0cb6-4f43-8e6c-3abe8ce5eeba/public_url"
+                            target="_blank">AWS Certified Cloud Practitioner (Jul 2025)</a></li>
+                    <li><a href="https://www.credential.net/0ab4e836-e8b8-4977-a6a9-d4b72a03a199#acc.YOiMsADp"
+                            target="_blank">TensorFlow Developer Certificate (Feb 2024)</a></li>
+                </ul>
+
+                <h2>Skills</h2>
+                <p><strong>Languages:</strong> Python, JavaScript, HTML, CSS</p>
+                <p><strong>Machine Learning:</strong> TensorFlow, PyTorch, Keras; LLMs, CV, Data Processing</p>
+                <p><strong>Cloud:</strong> AWS (EC2, S3, Lambda, Textract, DynamoDB, CloudFront, API Gateway, Route53)
+                </p>
+                <p><strong>Tools & DevOps:</strong> Git, Linux, Terraform</p>
+            </div>
+        </section>
+
+
+        <section id="website" class="tab-content">
+        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
