@@ -16,6 +16,31 @@ main {
     overflow-y: auto;
 }
 
+.external-icon {
+    font-size: 1em;
+    margin-left: 2px;
+    vertical-align: super;
+    opacity: 0.7;
+}
+
+a {
+    color: var(--hover-color);
+    text-decoration: none !important;
+    font-weight: 500;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+    transform: translateY(-1px);
+    color: var(--hover-color);
+}
+
+a:hover {
+    transform: translateY(-1px);
+    color: var(--hover-color);
+}
+
 
 .header {
     position: sticky;
@@ -185,7 +210,7 @@ main {
 
 /* ===== Resume Section ===== */
 #resume {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 4rem auto;
     padding: 0 1.5rem;
     line-height: 1.8;
@@ -218,7 +243,7 @@ main {
 #resume h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #111827;
     margin-bottom: 0.1rem;
 }
@@ -272,6 +297,70 @@ main {
 #resume p strong {
     color: #111827;
 }
+
+/* ===== Resume Layout with Sidebar ===== */
+.resume-container {
+    display: flex;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding-left: 1rem;
+}
+
+.resume-sidebar {
+    flex: 0 0 180px;
+    position: sticky;
+    top: 6rem;
+    align-self: flex-start;
+    height: fit-content;
+    margin-left: -10rem;
+}
+
+
+.resume-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid rgba(241, 128, 45, 0.2);
+}
+
+.resume-sidebar li {
+    margin-bottom: 1rem;
+}
+
+.resume-sidebar a {
+    display: block;
+    padding-left: 1rem;
+    font-weight: 500;
+    color: #374151;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.resume-sidebar a:hover {
+    color: var(--hover-color);
+    transform: translateX(4px);
+}
+
+.resume-section {
+    flex: 1.4;
+    max-width: 80rem;
+}
+
+/* ===== Responsive (hide sidebar on small screens) ===== */
+@media (max-width: 900px) {
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .resume-sidebar {
+        display: none;
+    }
+}
+
 
 /* ===== Responsive Layout===== */
 @media (max-width: 900px) {

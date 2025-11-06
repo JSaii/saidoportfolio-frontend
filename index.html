@@ -15,7 +15,7 @@
     <header class="header">
         <div class="title-name">Joseph Saido Gabriel</div>
         <nav class="nav">
-            <div id="about-btn" class="nav-btn active">About me</div>
+            <div id="about-btn" class="nav-btn">About me</div>
             <div id="resume-btn" class="nav-btn">My Resume</div>
             <div id="this-site-btn" class="nav-btn">About this website</div>
         </nav>
@@ -23,19 +23,22 @@
     </header>
 
     <main>
-        <section id="about" class="tab-content active">
+        <section id="about" class="tab-content">
             <h2 class="about-name">Joseph Saido Gabriel</h2>
             <h1>About Me</h1>
             <p>
-                Hi! I'm a full-stack developer and AI researcher passionate
-                about blending elegant design with powerful systems.
-                I love building modern, efficient applications that feel both clean and purposeful — from serverless AWS
-                stacks to intelligent essay-scoring models.
+                Hello! I'm an AI researcher and full-stack developer who loves exploring how technology can think,
+                learn, and create.
+                I’m passionate about turning complex ideas into clear, purposeful systems. My interest spans from
+                intelligent
+                models to modern, efficient applications built on scalable AWS architectures.
+
             </p>
             <p>
                 My philosophy: keep things simple, scalable, and human-centered.
-                Outside of coding, I enjoy cycling, music composition, and experimenting with creative tech projects
-                that merge art and logic.
+                Outside of coding, I enjoy playing the piano, music composition, art, anime and games! So, it doesn't
+                have to
+                be about business, if you feel like it, don't be afraid to reach out to me!
             </p>
 
             <div class="social-links">
@@ -47,101 +50,180 @@
             </div>
         </section>
         <section id="resume" class="tab-content">
-            <div class="resume-section">
-                <h1>My Resume</h1>
-
-                <h2>Education</h2>
-                <div class="resume-entry">
-                    <h3>Shibaura Institute of Technology, Tokyo, Japan</h3>
-                    <p><em>Master’s Course, Electrical Engineering and Computer Science</em> (Apr 2024 – Apr 2026,
-                        Expected)</p>
-                    <p>Data Science/Engineering Laboratory – NLP Researcher (Current GPA 3.9 / 4)</p>
-                </div>
-
-                <div class="resume-entry">
-                    <h3>Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia</h3>
-                    <p><em>Bachelor of Engineering in Computer Engineering</em> (Aug 2019 – Sept 2023, GPA 3.75 / 4)</p>
-                </div>
-
-                <h2>Experience</h2>
-                <div class="resume-entry">
-                    <p><em>Jul 2025 – Aug 2025</em></p>
-                    <h3>Full-Stack Developer – <a href="https://ocrlogbook.com" target="_blank">ocrlogbook.com</a></h3>
-                    <p>Joint development with Air Hong-Kong pilot.</p>
+            <div class="resume-container">
+                <nav class="resume-sidebar">
                     <ul>
-                        <li>Built a serverless OCR pipeline to extract structured flight log data (names, route,
-                            aircraft, times) from uploaded screenshots.
-                        </li>
-                        <li>Integrated Amazon Textract for OCR processing, reducing manual logbook entry time from
-                            several minutes down to seconds per
-                            record. Supported batch processing to cut manual work even further.
-                        </li>
-                        <li>Designed a scalable cloud architecture using S3, CloudFront, API Gateway, Lambda, and
-                            DynamoDB, with Route53.
-                        </li>
-                        <li>Delivered the complete solution end-to-end by developing a polished HTML/CSS/JavaScript
-                            front-end for uploading, viewing,
-                            and exporting results.</li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#skills">Skills</a></li>
                     </ul>
-                </div>
-
-                <h2>Projects</h2>
-                <div class="resume-entry">
-                    <p><em>Nov 2025</em></p>
-                    <h3>AWS Serverless Website – <a href="https://josephsaido.com" target="_blank">josephsaido.com</a>
-                    </h3>
-                    <p>Personal portfolio and resume built on a fully serverless AWS architecture with a
-                        custom frontend.</p>
-                    <ul>
-                        <li>Developed a scalable static website hosted on S3 and distributed globally through CloudFront
-                            with Route53 DNS and ACM SSL certificates.</li>
-                        <li>Implemented multi-environment CI/CD pipelines (test and live) using AWS CodePipeline,
-                            CodeCommit, and S3 artifact buckets for automated deployments.</li>
-                        <li>Automated infrastructure provisioning and updates with Terraform, enabling fully
-                            reproducible, version-controlled builds.</li>
-                        <li>Designed and built a modern, responsive frontend using HTML, CSS, and vanilla JavaScript.
-                        </li>
-                        <li>Integrated Lambda and DynamoDB for visitor tracking, analytics, and feedback form
-                            submissions with real-time updates.</li>
-                        <li>Configured fine-grained IAM roles, artifact access policies, and environment isolation for
-                            security and controlled CI/CD automation.</li>
+                </nav>
+                <div class="resume-section">
+                    <h1>My Resume</h1>
+                    <h2 id="education">Education</h2>
+                    <p><em>Apr 2024 – Apr 2026
+                            (Expected)</em></p>
+                    <div class="resume-entry">
+                        <h3>• Shibaura Institute of Technology, Tokyo, Japan</h3>
+                        <p><em>Master’s Course, Electrical Engineering and Computer Science</em> </p>
+                        <p>Data Science/Engineering Laboratory – NLP Researcher</p>
+                        <p><strong>Current GPA 3.9 / 4</strong></p>
+                    </div>
+                    <div class="resume-entry">
+                        <p><em>Aug 2019 – Sept 2023</em></p>
+                        <h3>• Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia</h3>
+                        <p><em>Bachelor of Engineering in Computer Engineering</em></p>
+                        <p><strong>GPA 3.75 / 4</strong></p>
+                    </div>
+                    <h2 id="experience">Experience</h2>
+                    <div class="resume-entry">
+                        <p><em>Jul 2025 – Aug 2025</em></p>
+                        <h3>• Full-Stack Developer – <a href="https://ocrlogbook.com" target="_blank">ocrlogbook.com<span
+                                    class="external-icon">↗</span> </a></h3>
+                        <p>Joint development with an Air Hong Kong pilot to build an automated OCR-based
+                            flight-log extraction tool.</p>
+                        <ul>
+                            <li>Built a serverless OCR pipeline to extract structured flight log data (names, route,
+                                aircraft, times) from uploaded screenshots.
+                            </li>
+                            <li>Integrated Amazon Textract for OCR processing, reducing manual logbook entry time from
+                                several minutes down to seconds per
+                                record. Supported batch processing to cut manual work even further.
+                            </li>
+                            <li>Designed a scalable cloud architecture using S3, CloudFront, API Gateway, Lambda, and
+                                DynamoDB, with Route53.
+                            </li>
+                            <li>Delivered the complete solution end-to-end by developing a polished HTML/CSS/JavaScript
+                                front-end for uploading, viewing,
+                                and exporting results.</li>
+                        </ul>
+                    </div>
+                    <h2 id="projects">Projects</h2>
+                    <div class="resume-entry">
+                        <p><em>Nov 2025</em></p>
+                        <h3>• AWS Serverless Website – <a href="https://josephsaido.com"
+                                target="_blank">josephsaido.com<span class="external-icon">↗</span></a>
+                        </h3>
+                        <p>Personal portfolio and resume built on a fully serverless AWS architecture with a
+                            custom frontend.</p>
+                        <ul>
+                            <li>Developed a scalable static website hosted on S3 and distributed globally through
+                                CloudFront
+                                with Route53 DNS and ACM SSL certificates.</li>
+                            <li>Implemented multi-environment CI/CD pipelines (test and live) using AWS CodePipeline,
+                                CodeCommit, and S3 artifact buckets for automated deployments.</li>
+                            <li>Automated infrastructure provisioning and updates with Terraform, enabling fully
+                                reproducible, version-controlled builds.</li>
+                            <li>Designed and built a modern, responsive frontend using HTML, CSS, and vanilla
+                                JavaScript.
+                            </li>
+                            <li>Integrated Lambda and DynamoDB for visitor tracking, analytics, and feedback form
+                                submissions with real-time updates.</li>
+                            <li>Configured fine-grained IAM roles, artifact access policies, and environment isolation
+                                for
+                                security and controlled CI/CD automation.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <p><em>Jun 2025</em></p>
+                        <h3>• Desktop AI Companion App –
+                            <a href="https://github.com/JSaii/waifu-live" target="_blank">WaifuLive<span
+                                    class="external-icon">↗</span></a>
+                        </h3>
+                        <p><em>An open-source desktop AI companion that observes screen context and responds in
+                                speech.</em>
+                        </p>
+                        <ul>
+                            <li>Architected and implemented a desktop overlay app that monitors on-screen context via
+                                vision-language models and responds with expressive local text-to-speech.</li>
+                            <li>Built core functionality in Python (PyQt for UI, OpenCV for image capture/processing)
+                                and
+                                integrated real-time interaction features.</li>
+                            <li>Designed and illustrated the virtual character “MirAI” from scratch, and led full
+                                product
+                                design and UX direction.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <p><em>Apr 2024 – Aug 2025</em></p>
+                        <h3>• Research Paper – <a href="https://link.springer.com/chapter/10.1007/978-3-032-04728-1_11"
+                                target="_blank">Enhancing Automated Essay Scoring Model’s Interpretability Using Triplet
+                                Loss with Teacher-Defined Rubric as Anchors<span class="external-icon">↗</span></a></h3>
+                        <p><em>Published on the 6th Joint International Conference on AI, Big Data and Blockchain (AIBB
+                                2025)</em></p>
+                        <ul>
+                            <li>Proposed a rubric-aligned automated essay scoring (AES) method leveraging triplet loss
+                                with
+                                teacher-defined rubric anchors to improve interpretability.</li>
+                            <li>Introduced <em>Dual-Anchor Triplet Loss</em> function, enhancing score separation and
+                                training efficiency.</li>
+                            <li>Built and trained models on top of <em>DeBERTa</em>, using large-scale essay datasets
+                                with
+                                rubric-aligned supervision.</li>
+                            <li>Achieved performance comparable to state-of-the-art models, outperforming larger
+                                LLM-based
+                                approaches.</li>
+                            <li>Published at AIBB 2025, Istanbul.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <p><em>Sept 2022 – Aug 2023</em></p>
+                        <h3>• Bachelor’s Final Research Project – Hand Pose-Based Video Game Control</h3>
+                        <p><em>A machine learning system that lets players control racing games using only
+                                webcam-detected
+                                hand gestures.</em></p>
+                        <ul>
+                            <li>Developed a machine learning-based game controller that uses webcam hand-pose
+                                recognition
+                                for natural racing game interaction.</li>
+                            <li>Implemented and benchmarked multiple CNN architectures (ResNet, EfficientNet), exploring
+                                trade-offs between accuracy and inference speed, achieving 98% accuracy with low-latency
+                                real-time control.</li>
+                            <li>Integrated models into a fully functional desktop application for user testing and
+                                demonstration.</li>
+                            <li>Conducted a <em>User Experience Questionnaire (UEQ)</em> study, showing positive
+                                feedback on
+                                usability, clarity, and enjoyment.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-entry">
+                        <p><em>Apr 2022 – July 2022</em></p>
+                        <h3>• Android App Developer for <em>‘rePlasc’</em> – Waste Recycling App</h3>
+                        <p><em>Bangkit Academy, a Google-led Career Readiness Program, Capstone Project</em></p>
+                        <ul>
+                            <li>Prototyped and co-developed a mobile application as part of a multidisciplinary capstone
+                                team.</li>
+                            <li>Implemented key features including RESTful API integration and responsive UI components.
+                            </li>
+                            <li>Integrated a TensorFlow Lite model for real-time image classification directly on the
+                                device.</li>
+                            <li>Collaborated closely with teammates to ensure system functionality and deliver the final
+                                product to a partner company.</li>
+                        </ul>
+                    </div>
+                    <h2 id="certifications">Certifications</h2>
+                    <ul class="resume-list">
+                        <li><a href="https://www.credly.com/badges/acc2c787-9cea-4a94-a705-d891a2852947/public_url"
+                                target="_blank">AWS Certified AI Practitioner (Sep 2025)<span
+                                    class="external-icon">↗</span></a></li>
+                        <li><a href="https://www.credly.com/badges/07336388-0cb6-4f43-8e6c-3abe8ce5eeba/public_url"
+                                target="_blank">AWS Certified Cloud Practitioner (Jul 2025)<span
+                                    class="external-icon">↗</span></a></li>
+                        <li><a href="https://www.credential.net/0ab4e836-e8b8-4977-a6a9-d4b72a03a199#acc.YOiMsADp"
+                                target="_blank">TensorFlow Developer Certificate (Feb 2024)<span
+                                    class="external-icon">↗</span></a></li>
                     </ul>
+                    <h2 id="skills">Skills</h2>
+                    <p><strong>• Languages:</strong> Python, JavaScript, C++, HTML, CSS</p>
+                    <p><strong>• Machine Learning:</strong> TensorFlow, PyTorch, Keras; LLMs, CV, Data Processing</p>
+                    <p><strong>• Cloud:</strong> AWS — EC2, S3, Lambda, Textract, DynamoDB, CloudFront, API Gateway,
+                        Route53,
+                        CodePipeline
+                    </p>
+                    <p><strong>• Tools & DevOps:</strong> Git, Linux, Terraform</p>
                 </div>
-
-                <div class="resume-entry">
-                    <h3>Research Paper – <a href="https://link.springer.com/chapter/10.1007/978-3-032-04728-1_11"
-                            target="_blank">AIBB 2025</a></h3>
-                    <p>“Enhancing Automated Essay Scoring Model’s Interpretability”</p>
-                    <ul>
-                        <li>Proposed a rubric-aligned AES method using Dual-Anchor Triplet Loss on DeBERTa.</li>
-                        <li>Published results showing interpretability improvements and competitive QWK scores.</li>
-                    </ul>
-                </div>
-
-                <div class="resume-entry">
-                    <h3>Bachelor’s Final Research Project – Hand Pose-Based Video Game Control</h3>
-                    <ul>
-                        <li>Developed a ML-based game controller using webcam hand-pose recognition.</li>
-                        <li>Achieved 98% accuracy with real-time control and positive UEQ user feedback.</li>
-                    </ul>
-                </div>
-
-                <h2>Certifications</h2>
-                <ul class="resume-list">
-                    <li><a href="https://www.credly.com/badges/acc2c787-9cea-4a94-a705-d891a2852947/public_url"
-                            target="_blank">AWS Certified AI Practitioner (Sep 2025)</a></li>
-                    <li><a href="https://www.credly.com/badges/07336388-0cb6-4f43-8e6c-3abe8ce5eeba/public_url"
-                            target="_blank">AWS Certified Cloud Practitioner (Jul 2025)</a></li>
-                    <li><a href="https://www.credential.net/0ab4e836-e8b8-4977-a6a9-d4b72a03a199#acc.YOiMsADp"
-                            target="_blank">TensorFlow Developer Certificate (Feb 2024)</a></li>
-                </ul>
-
-                <h2>Skills</h2>
-                <p><strong>Languages:</strong> Python, JavaScript, HTML, CSS</p>
-                <p><strong>Machine Learning:</strong> TensorFlow, PyTorch, Keras; LLMs, CV, Data Processing</p>
-                <p><strong>Cloud:</strong> AWS (EC2, S3, Lambda, Textract, DynamoDB, CloudFront, API Gateway, Route53)
-                </p>
-                <p><strong>Tools & DevOps:</strong> Git, Linux, Terraform</p>
             </div>
         </section>
 
