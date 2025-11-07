@@ -74,7 +74,7 @@ async function updateVisitorCount() {
             visitorCounterText.textContent = `Visitors : ${data.count}`;
         } 
         else {
-            visitorCounterText.textContent = "Visitors : 0";
+            visitorCounterText.textContent = "Visitors : ~";
         }
     } catch (err) {
         console.error("Failed to load visitor count:", err);
