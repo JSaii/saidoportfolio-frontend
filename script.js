@@ -4,7 +4,7 @@ const sections = document.querySelectorAll(".tab-content");
 const savedTabId = localStorage.getItem("activeTabId") || "about-btn";
 const savedSectionId =
     savedTabId === "about-btn" ? "about" :
-    savedTabId === "resume-btn" ? "resume" : "website";
+        savedTabId === "resume-btn" ? "resume" : "website";
 
 
 document.getElementById(savedTabId).classList.add("active");
@@ -60,3 +60,29 @@ function adjustMainHeight() {
 
 window.addEventListener("load", adjustMainHeight);
 window.addEventListener("resize", adjustMainHeight);
+
+
+const API_URL = "https://5tj3g9hzyi.execute-api.us-east-1.amazonaws.com/prod/count";
+const visitorCounterText = document.querySelector(".visitor-count")
+
+async function updateVisitorCount() {
+    console.log("Test")
+    try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+
+        if (data.count) {
+            visitorCounterText.textContent = `Visitors : ${data.count}`;
+        } else if (data.newCount) {
+            visitorCounterText.textContent = `Visitors : ${data.count}`;
+        } else {
+            visitorCounterText.textContent = "Visitors : -";
+        }
+    } catch (err) {
+        console.error("Failed to load visitor count:", err);
+        document.getElementById("visitor-count").innerText = "???";
+    }
+}
+
+window.onload = updateVisitorCount;
+
