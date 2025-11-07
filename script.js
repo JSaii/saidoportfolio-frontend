@@ -66,7 +66,6 @@ const API_URL = "https://5tj3g9hzyi.execute-api.us-east-1.amazonaws.com/prod/cou
 const visitorCounterText = document.querySelector(".visitor-count")
 
 async function updateVisitorCount() {
-    console.log("Test")
     try {
         const response = await fetch(API_URL);
         const data = await response.json();
