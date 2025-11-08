@@ -72,7 +72,7 @@ async function updateVisitorCount() {
 
         if (data.count) {
             visitorCounterText.textContent = `Visitors : ${data.count}`;
-        } 
+        }
         else {
             visitorCounterText.textContent = "Visitors : ~";
         }
@@ -83,4 +83,16 @@ async function updateVisitorCount() {
 }
 
 window.onload = updateVisitorCount;
+
+// LOAD IMAGE
+const img = document.getElementById('architecture-img');
+const spinner = document.querySelector('.spinner');
+
+if (img && spinner) {
+    img.addEventListener('load', () => {
+        spinner.style.display = 'none';
+        img.style.display = 'block';
+        img.style.opacity = '1';
+    });
+}
 

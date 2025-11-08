@@ -36,7 +36,7 @@
             </p>
             <p>
                 My philosophy: keep things simple, scalable, and human-centered.
-                Outside of coding, I enjoy playing the piano, music composition, art, anime and games! So, it doesn't
+                Outside of coding, I enjoy playing the piano, music composition, art, anime and games! It doesn't
                 have to
                 be about business, if you feel like it, don't be afraid to reach out to me!
             </p>
@@ -229,7 +229,58 @@
 
 
         <section id="website" class="tab-content">
+            <div class="website-container">
+                <h1>About This Website</h1>
+                <p>
+                    This website is my personal portfolio, which I designed, developed and deployed on a
+                    <strong>serverless AWS architecture</strong>. It was built as part of the
+                    <a href="https://cloudresumechallenge.dev/" target="_blank"><strong>Cloud Resume
+                            Challenge<span class="external-icon">↗</span></strong></a>, a challenge that tests
+                    real-world cloud engineering
+                    skills by combining front-end design, back-end development, and DevOps automation into a single
+                    end-to-end
+                    project.
+                </p>
+
+                <p>
+                    The project serves as both a showcase of my skills and a hands-on demonstration of
+                    <strong>modern cloud infrastructure design</strong> — from IaC automation and CI/CD pipelines to
+                    scalable, globally distributed delivery with AWS CloudFront.
+                </p>
+
+                <div class="image-container">
+                    <div class="spinner"></div>
+                    <img src="https://test.josephsaido.com/assets/josephsaidocom.png" alt="Architecture Diagram" id="architecture-img" loading="lazy">
+                </div>
+                <h2>Tech Stack Overview</h2>
+                <ul>
+                    <li><strong>Frontend:</strong> Static site built with HTML, CSS, and vanilla JavaScript.</li>
+                    <li><strong>Backend:</strong> Serverless compute using AWS Lambda and API Gateway for visitor
+                        counter.</li>
+                    <li><strong>Database:</strong> Amazon DynamoDB for fast, scalable data storage.</li>
+                    <li><strong>Infrastructure:</strong> Provisioned via <strong>Terraform</strong> for reproducible IaC
+                        deployments.</li>
+                    <li><strong>Hosting:</strong> AWS S3 (static hosting) + CloudFront (global CDN) + Route53 (DNS).
+                    </li>
+                    <li><strong>CI/CD:</strong> Automated builds and deployments through GitHub and CodePipeline.
+                    </li>
+                </ul>
+
+                <p>
+                    The diagram above shows the core architecture of this website and its development environment.
+                    Frontend assets are hosted on Amazon S3 and distributed globally through CloudFront,
+                    while backend requests are processed through API Gateway and AWS Lambda functions connected to
+                    DynamoDB.
+                </p>
+
+
+                <p>
+                    The source code is version-controlled on GitHub and automatically deployed when changes are pushed.
+                    This ensures a <strong>clean, reproducible workflow</strong> for maintaining and extending the site.
+                </p>
+            </div>
         </section>
+
     </main>
     <script src="script.js?v=5"></script>
 </body>
