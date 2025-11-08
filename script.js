@@ -58,7 +58,6 @@ function adjustMainHeight() {
     }
 }
 
-window.addEventListener("load", adjustMainHeight);
 window.addEventListener("resize", adjustMainHeight);
 
 
@@ -82,17 +81,25 @@ async function updateVisitorCount() {
     }
 }
 
-window.onload = updateVisitorCount;
+window.addEventListener("load", () => {
+    adjustMainHeight();
+    updateVisitorCount();
+    
+    const img = document.getElementById("architecture-img");
+    const spinner = document.querySelector(".spinner");
 
-// LOAD IMAGE
-const img = document.getElementById('architecture-img');
-const spinner = document.querySelector('.spinner');
-
-if (img && spinner) {
-    img.addEventListener('load', () => {
-        spinner.style.display = 'none';
-        img.style.display = 'block';
-        img.style.opacity = '1';
-    });
-}
-
+    if (img && spinner) {
+        if (img.complete) {
+            // already cached and loaded
+            spinner.style.display = "none";
+            img.style.display = "block";
+            img.style.opacity = "1";
+        } else {
+            img.addEventListener("load", () => {
+                spinner.style.display = "none";
+                img.style.display = "block";
+                img.style.opacity = "1";
+            });
+        }
+    }
+});
