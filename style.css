@@ -92,6 +92,12 @@ a:hover {
     padding-bottom: 0.25rem;
     border-bottom: 2px solid transparent;
     opacity: 0.7;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -moz-tap-highlight-color: transparent;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    user-select: none;
     transition:
         color 0.4s ease,
         border-color 0.4s ease,
@@ -415,7 +421,8 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300px; /* ensures spinner area before image loads */
+    min-height: 300px;
+    /* ensures spinner area before image loads */
 }
 
 .spinner {
@@ -429,8 +436,13 @@ a:hover {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .image-container img {
