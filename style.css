@@ -151,7 +151,7 @@ a:hover {
 
 /* ===== About Section ===== */
 #about {
-    max-width: 800px;
+    max-width: 850px;
     margin: 4rem auto;
     padding: 0 1.5rem;
     line-height: 1.8;
@@ -191,6 +191,8 @@ a:hover {
 /* ===== Social Links ===== */
 .social-links {
     margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .linkedin-link {
@@ -214,6 +216,28 @@ a:hover {
     fill: var(--hover-color);
     filter: invert(52%) sepia(91%) saturate(2423%) hue-rotate(360deg) brightness(101%) contrast(97%);
 }
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: #374151;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.email-link:hover {
+    transform: translateY(-1px);
+    opacity: 0.8;
+}
+
+.email-icon {
+    width: 22px;
+    height: 22px;
+    filter: invert(52%) sepia(91%) saturate(2423%) hue-rotate(360deg) brightness(101%) contrast(97%);
+}
+
 
 /* ===== Resume Section ===== */
 #resume {
@@ -539,6 +563,9 @@ a:hover {
 
     .social-links {
         justify-content: center;
+        align-items: center;
         text-align: center;
+        flex-direction: column;
+        gap: 1rem;
     }
 }
