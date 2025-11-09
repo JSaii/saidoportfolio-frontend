@@ -12,12 +12,17 @@ document.getElementById(savedSectionId).classList.add("active");
 document.getElementById(savedSectionId).style.display = "block";
 document.getElementById(savedSectionId).style.opacity = "1";
 
-
+//TAB CONTROL
 tabs.forEach(tab => {
     tab.addEventListener("click", () => {
         if (tab.classList.contains("active")) {
             return;
         }
+
+        const main = document.querySelector("main");
+        main.style.scrollBehavior = "auto";
+        main.scrollTo(0, 0);
+        main.style.scrollBehavior = "smooth";
 
         const current = document.querySelector(".tab-content.active");
         if (current) {
@@ -41,13 +46,12 @@ tabs.forEach(tab => {
         next.style.opacity = "0";
         setTimeout(() => next.style.opacity = "1", 0.1);
 
-        window.scrollTo({ top: 0, behavior: "smooth" });
-
         localStorage.setItem("activeTabId", tab.id);
 
     });
 });
 
+//DYNAMICALLY FIND HEADER HEIGHT
 function adjustMainHeight() {
     const header = document.querySelector(".header");
     const main = document.querySelector("main");
@@ -61,6 +65,7 @@ function adjustMainHeight() {
 window.addEventListener("resize", adjustMainHeight);
 
 
+//VISITOR COUNTER
 const API_URL = "https://5tj3g9hzyi.execute-api.us-east-1.amazonaws.com/prod/count";
 const visitorCounterText = document.querySelector(".visitor-count")
 
@@ -81,10 +86,11 @@ async function updateVisitorCount() {
     }
 }
 
+//DO ON LOAD
 window.addEventListener("load", () => {
     adjustMainHeight();
     updateVisitorCount();
-    
+
     const img = document.getElementById("architecture-img");
     const spinner = document.querySelector(".spinner");
 
@@ -103,3 +109,29 @@ window.addEventListener("load", () => {
         }
     }
 });
+
+// RESUME SECTION NAVBAR SCROLL OVERRIDE
+document.querySelectorAll('.resume-sidebar a').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        const target = document.querySelector(href);
+        const main = document.querySelector('main');
+
+        if (!main) return;
+
+        if (href === '#education') {
+            main.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else if (target) {
+            main.scrollTo({
+                top: target.offsetTop - 20,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
