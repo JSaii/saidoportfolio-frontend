@@ -457,6 +457,17 @@ a:hover {
 
 /* ===== Responsive Layout===== */
 @media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    main {
+        max-height: none;
+        height: auto;
+        overflow: visible;
+    }
+
     main::after {
         content: "";
         display: block;
