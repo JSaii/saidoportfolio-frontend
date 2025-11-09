@@ -456,6 +456,12 @@ a:hover {
 
 /* ===== Responsive Layout===== */
 @media (max-width: 900px) {
+    main::after {
+        content: "";
+        display: block;
+        height: 150px;
+    }
+
     .header {
         flex-direction: column;
         align-items: center;
