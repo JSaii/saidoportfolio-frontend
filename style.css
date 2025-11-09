@@ -463,9 +463,13 @@ a:hover {
     }
 
     main {
-        max-height: none;
-        height: auto;
-        overflow: visible;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+
+    main::-webkit-scrollbar {
+        display: none;
     }
 
     main::after {
