@@ -1,7 +1,7 @@
 const tabs = document.querySelectorAll(".nav-btn");
 const sections = document.querySelectorAll(".tab-content");
 
-const savedTabId = localStorage.getItem("activeTabId") || "about-btn";
+const savedTabId = sessionStorage.getItem("activeTabId") || "about-btn";
 const savedSectionId =
     savedTabId === "about-btn" ? "about" :
         savedTabId === "resume-btn" ? "resume" : "website";
@@ -46,7 +46,7 @@ tabs.forEach(tab => {
         next.style.opacity = "0";
         setTimeout(() => next.style.opacity = "1", 0.1);
 
-        localStorage.setItem("activeTabId", tab.id);
+        sessionStorage.setItem("activeTabId", tab.id);
 
     });
 });
